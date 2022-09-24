@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-def print_matrix_integer(matrix=[[]]):
-    for i in matrix:
-        print(*i)
+def no_c(my_string):
+    no_c = {ord('c'): "", ord('C'): ""}
+    return (my_string.translate(no_c))
