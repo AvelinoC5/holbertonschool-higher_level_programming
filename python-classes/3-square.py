@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
+
 Square Class this module defines
+
 """
 
 
@@ -8,8 +10,10 @@ class Square:
     """initalization class Squiare"""
 
     def __init__(self, size=0):
+
         """Method: Square object
         args: size of the square"""
+
         if not isinstance(size, int):
             raise (TypeError("size must be an integer"))
         if int(size) < 0:
