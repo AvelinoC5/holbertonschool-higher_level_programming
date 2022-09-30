@@ -3,6 +3,7 @@
 Square Class
 """
 
+
 class Square:
     """initalization class Squiare"""
 
