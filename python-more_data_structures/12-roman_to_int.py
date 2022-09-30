@@ -15,7 +15,6 @@ def roman_to_int(roman_string):
     count = 0
 
     for i in range(len(roman_c)):
-        
         if i > 0 and dict_rom[roman_c[i]] > dict_rom[roman_c[i - 1]]:
             count += dict_rom[roman_c[i]] - 2 * dict_rom[roman_c[i - 1]]
         else:
