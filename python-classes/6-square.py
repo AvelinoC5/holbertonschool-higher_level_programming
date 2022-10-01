@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """
 Square Class
@@ -43,6 +44,10 @@ class Square:
 
         self.__position = value
 
+    def area(self):
+        """Return area of the Square"""
+        area_sqr = self.__size**2
+        return (area_sqr)
 
     def my_print(self):
         if self.__size == 0:
@@ -52,9 +57,3 @@ class Square:
         for indx in range(self.__size):
             print(" " * self.__position[0], end="")
             print("#" * self.__size)
-
-
-    def area(self):
-        """Return area of the Square"""
-        area_sqr = self.__size**2
-        return (area_sqr)
