@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" Program that validate 
-that object is exact the same """
+""" Program that validate that object is exact the same """
 
 
 def is_same_class(obj, a_class):
