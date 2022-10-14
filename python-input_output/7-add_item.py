@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Program Load, add, save all arguments to a Python list,
-and then save them to a file
+Use with two lasted modules
 """
 import sys
 
