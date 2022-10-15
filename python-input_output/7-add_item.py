@@ -1,21 +1,17 @@
 #!/usr/bin/python3
-import json
-from sys import argv
 """
-File contains a function that adds all arguments
-to a python list and saves to a file
+7-add_item
+Use with two lasted modules
 """
+import sys
 
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-save_json = __import__('5-save_to_json_file').save_to_json_file
-load_json = __import__('6-load_from_json_file').load_from_json_file
-
-filename = 'add_item.json'
-
+open("add_item.json", "a")
 try:
-    new = load_json(filename)
-except (ValueError, FileNotFoundError):
-    new = []
+    file = load_from_json_file("add_item.json")
+except (ValueError):
+    file = []
+save_to_json_file(file + sys.argv[1:], "add_item.json")
 
-new = new + argv[1:]
-save_json(new, filename)
