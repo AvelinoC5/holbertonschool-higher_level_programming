@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" Base class of all other classes in this project"""
+""" Base class """
 
 
 import json
 from os.path import exists
+
 
 class Base:
     """First class atributtes"""
