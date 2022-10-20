@@ -1,65 +1,54 @@
-
 #!/usr/bin/python3
-"""Class 'Square' that inherits from 'Rectangle"""
-
-from models.rectangle import Rectangle
+""" Program that defines a Square in base from Rectangle """
+from . rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Class constructor"""
-
+    """ class Square that inherits from Rectangle """
     def __init__(self, size, x=0, y=0, id=None):
-        """Constructor method with attributes"""
+        """ Constructor """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """'size' getter in public"""
-        return self.width
+        """ Retriebe the size of square """
+        return (self.width)
 
     @size.setter
     def size(self, value):
-        """'size' setter (operations and validations)"""
-
+        """ set passet private attribute of size """
         self.width = value
         self.height = value
 
     def __str__(self):
-        """Represents the class objects as a string"""
-
-        return "[Square] ({}) {}/{} - {}" \
+        """ overriding the __str__ method that returns a custom string """
+        mssg = "[Square] ({:d}) {:d}/{:d} - {:d}"\
             .format(self.id, self.x, self.y, self.width)
+        return (mssg)
 
     def update(self, *args, **kwargs):
-        """Assigns an argument to each attribute"""
-
-        args_len = len(args)
-
-        if args:
-            if args_len > 0:
-                self.id = args[0]
-            if args_len > 1:
-                self.size = args[1]
-            if args_len > 2:
-                self.x = args[2]
-            if args_len > 3:
-                self.y = args[3]
-
-        if args is None or args_len == 0:
+        """ Method that assigns an argument to each attribute
+        by Non-keyword and key/value"""
+        arlist = ["id", "size", "x", "y"]
+        if (args and len(args) != 0):
+            for arl in range(len(args)):
+                if (arl == 0):
+                    super().update(args[arl])
+                elif (arl < len(arlist)):
+                    setattr(self, arlist[arl], args[arl])
+        else:
             for key, value in kwargs.items():
-                if key == "id":
-                    self.id = value
-                if key == "size":
-                    self.size = value
-                if key == "x":
-                    self.x = value
-                if key == "y":
-                    self.y = value
+                if (key == 'id'):
+                    super().update(value)
+                else:
+                    setattr(self, key, value)
 
     def to_dictionary(self):
-        """Dictionary representation of a 'Square'"""
-
-        return {"id": self.id,
-                "size": self.width,
-                "x": self.x,
-                "y": self.y}
+        """ returns the dictionary representation of a Square """
+        my_dict = {
+            'id': self.id,
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
+        }
+        return (my_dict)
