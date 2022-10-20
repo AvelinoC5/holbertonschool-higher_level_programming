@@ -1,6 +1,6 @@
 
 #!/usr/bin/python3
-""" Program that defines a Square in base from Rectangle """
+"""Class 'Square' that inherits from 'Rectangle"""
 
 from models.rectangle import Rectangle
 
