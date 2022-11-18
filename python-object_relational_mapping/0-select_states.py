@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' Script to retrieve data from a database 
+''' Script to retrieve data from a database
 Created on Nov 17 09:33:11 2022
 @author: Avelino Carvajal'''
 
