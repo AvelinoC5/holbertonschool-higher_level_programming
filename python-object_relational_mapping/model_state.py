@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """This module that contains the class definition of a State
     and an instance Base = declarative_base().
-   Created on Sunday, December 13, 2022
-   @author: DaisyG Chipana Lapa
 """
 
 from sqlalchemy import create_engine
