@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""This module lists all states with a name starting with N (upper N)
-   from the database hbtn_0e_0_usa
+"""
+This module lists all states with a name starting with N (upper N)
+from the database hbtn_0e_0_usa
+Created on Nov 17 09:33:11 2022
+@author: Avelino Carvajal
 """
 
 if __name__ == '__main__':
