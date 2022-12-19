@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-C_is = 'C is fun';
-Pyth = 'Python is cool';
-Java = 'JavaScript is amazing';
-console.log(C_is, Pyth, Java);
+console.log('C is fun');
+console.log('Python is cool');
+console.log('JavaScript is amazing');
+
