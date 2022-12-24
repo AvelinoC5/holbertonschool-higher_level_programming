@@ -1,16 +1,9 @@
 #!/usr/bin/node
+// get the status code
 
-const axios = require('axios').default;
-const Processes = require('process');
-const URL = Processes.argv[2];
+const url = process.argv[2];
+const request = require('request');
 
-axios
-  .get(URL)
-  .then(function (response) {
-    console.log('code: ' + response.status);
-  })
-  .catch(function (error) {
-    if (error.response) {
-      console.log('code: ' + error.response.status);
-    }
-  });
+request.get(url, (error, response) => {
+  if (!error) console.log(`code: ${response.statusCode}`);
+});
