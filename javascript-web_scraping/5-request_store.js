@@ -1,14 +1,14 @@
 #!/usr/bin/node
 
-const axios = require('axios');
-const URL = process.argv[2];
+const url = process.argv[2];
 const file = process.argv[3];
-const FileSystem = require('fs');
+const fs = require('fs');
+const request = require('request');
 
-axios.get(URL).then((response) => {
-  FileSystem.writeFile(file, response.data, 'utf-8', (err, data) => {
-    if (err) {
-      console.error(err);
-    }
-  });
+request.get(url, (error, response, data) => {
+  if (!error && response.statusCode === 200) {
+    fs.writeFile(file, data, (error) => {
+      if (error) console.log(error);
+    });
+  }
 });
